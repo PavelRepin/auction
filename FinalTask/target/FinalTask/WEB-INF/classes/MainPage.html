@@ -1,0 +1,298 @@
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Rich Only.</title>
+    <link rel="stylesheet" type="text/css" href="../webapp/css/mainPageStyle.css">
+    <script src="../webapp/javascript/RegistrationPage.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="preheader">
+        <a href="RefOnShoppingBasket">
+            <img height="23px" width="auto" alt="ShoppingBasket" src="http://kenguru.ru/images/shopping_cart.png">
+        </a>
+    </div>
+
+    <div class="preheaderTextItem">
+        <a href="RefOnAboutPage">About</a>
+    </div>
+
+    <div class="preheaderTextItem">
+        <a href="RefOnHelpPage">Help</a>
+    </div>
+
+    <div class="preheaderTextItem">
+        <a href="RefOnUserAcc">User account</a>
+    </div>
+
+    <div id="register" class="preheaderTextItem">
+        <a class="show-btn" href="javascript:void(0)"
+           onclick="document.getElementById('wrapper').style.display='block';document.getElementById('fade').style.display='block'">Enter/Register</a>
+    </div>
+
+    <div id="wrapper" class="wrapper">
+        <a class="close-btn" href="javascript:void(0)"
+           onclick="document.getElementById('wrapper').style.display='none';document.getElementById('fade').style.display='none'">Закрыть</a>
+
+        <form name="login-form" id="enter-form" class="enter-form" <!--action=""--> method="post">
+
+            <div class="headerEnter">
+                <h1>Authorization</h1>
+                <span>Enter your registration data to enter your account. </span>
+            </div>
+
+            <div class="content">
+                <input name="username" type="text" class="input username" value="Login" onfocus="this.value=''"/>
+                <input name="password" type="password" class="input password" value="Password" onfocus="this.value=''"/>
+            </div>
+
+            <div class="footer">
+                <input type="submit" name="submit" value="ENTER" class="button"/>
+                <a class="register" href="javascript:void(0)"
+                   onclick="document.getElementById('regform').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('wrapper').style.display='none'">Register</a>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div id="fade" class="black-overlay"
+         onclick="document.getElementById('wrapper').style.display='none';document.getElementById('fade').style.display='none';document.getElementById('regform').style.display='none'"></div>
+
+    <div id="regform" class="wrapper">
+        <a id="regbtn" class="close-btn" href="javascript:void(0)"
+           onclick="document.getElementById('regform').style.display='none';document.getElementById('fade').style.display='none'">Закрыть</a>
+
+        <form name="registration-form" id="registration-form" class="enter-form" <!--action=""--> method="post">
+
+            <div class="content">
+                <div class="h1">Registration</div>
+                <div class="span">Fill in the fields below to register.</div>
+                <div class="span">Enter your preferable username.</div>
+                <div id="incorname" class="incorrect">Only Latin, numbers, _ allowed; first character is letter. Minimum
+                    size is 5 characters!
+                </div>
+                <input name="username1" id="username1" type="text" class="input username" placeholder="Login"/>
+
+                <div class="span">Password.</div>
+                <div id="incorpass" class="incorrect">At least 1 uppercase, 1 lowercase Latin and 1 number. Minimum size
+                    is 6 characters!
+                </div>
+                <input name="password" id="password" type="password" class="input password" placeholder="******"/>
+
+                <div class="span">Repeat your password.</div>
+                <div id="incorpass1" class="incorrect">Check your repeated password!</div>
+                <input name="password1" id="password1" type="password" class="input password" placeholder="******"/>
+
+                <div class="span">Enter your actual Email.</div>
+                <div id="incoremail" class="incorrect">Email should inlude @ and . symbols!</div>
+                <input name="email" id="email" type="email" class="input email" placeholder="Email"/>
+
+                <div class="span">Tell us what is your age at last birthday.</div>
+                <div id="incoragey" class="incorrect">You are too young to bid!</div>
+                <div id="incorageo" class="incorrect">You are too old to bid!</div>
+                <div id="incorageempty" class="incorrect">Enter your age!</div>
+                <input name="age at last birthday" id="age" type="number" min="18" max="120" class="input age"
+                       placeholder="Age at last birthday"/>
+            </div>
+
+            <div class="footer">
+                <input type="submit" name="submit" value="REGISTER" class="button" onclick="return validate()"/>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<hr>
+<div class="header">
+
+    <div class="inline">
+        <img id="startpic"
+             alt="Final Bid."
+             src="https://www.russelljohns.com/usatoday/sellsheet-images/usat-2012-auction.gif">
+    </div>
+
+    <div class="inline">
+        <form method="post" class="search">
+            <input type="search" name="" placeholder="Search..." class="input"/>
+            <input type="submit" name="" value="" class="submit"/>
+        </form>
+    </div>
+
+    <div class="inline">
+        <div class="dropdownlist">
+            <button class="dropinfo">Category</button>
+            <div class="dropdownlist-content">
+                <a href="#">Painting</a>
+                <a href="#">Architecture</a>
+                <a href="#">Sculpture</a>
+                <a href="#">Clothes</a>
+                <a href="#">Realty</a>
+                <a href="#">Instrument</a>
+                <a href="#">Antiques</a>
+                <a href="#">Equipment</a>
+                <a href="#">Cars</a>
+                <a href="#">Other</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="inline">
+        <button class="dropinfo" id="putforbids" onclick="window.location.href='Page for accessing BD to put item on auction'">Put on auction</button>
+    </div>
+
+</div>
+
+<div class="welcome">
+    <p>Welcome on Rich Only auction site!</p>
+
+    <p id="helloText">This is the site where you can buy something new.<br>
+        If you have one hundred dollars Rich Only is not for you, stay away from here.<br>
+        But if you think you're really rich, start surfing and spend your money here.<br>
+        Try to feel this, you're rich!</p>
+</div>
+
+<div id="slideshow-wrap">
+    <input type="radio" id="button-1" name="controls" checked="checked"/>
+    <label for="button-1"></label>
+    <input type="radio" id="button-2" name="controls"/>
+    <label for="button-2"></label>
+    <input type="radio" id="button-3" name="controls"/>
+    <label for="button-3"></label>
+    <input type="radio" id="button-4" name="controls"/>
+    <label for="button-4"></label>
+    <input type="radio" id="button-5" name="controls"/>
+    <label for="button-5"></label>
+    <label for="button-1" class="arrows" id="arrow-1">></label>
+    <label for="button-2" class="arrows" id="arrow-2">></label>
+    <label for="button-3" class="arrows" id="arrow-3">></label>
+    <label for="button-4" class="arrows" id="arrow-4">></label>
+    <label for="button-5" class="arrows" id="arrow-5">></label>
+
+    <div id="slideshow-inner">
+        <ul>
+            <li id="slide1">
+                <img src="http://trade-jp.net/wp-content/uploads/2011/05/uction_01.jpg" alt="Today's stock."/>
+
+                <div class="description">
+                    <input type="checkbox" id="show-description-1"/>
+                    <label for="show-description-1" class="show-description-label">I</label>
+
+                    <div class="description-text">
+                        <h2>Today's stock!</h2>
+
+                        <p>Buy some item that has lower start price today!</p>
+                    </div>
+                </div>
+            </li>
+            <li id="slide2">
+                <img src="https://www.mochasoft.dk/images/buynow.jpg" alt="Buy now!"/>
+
+                <div class="description">
+                    <input type="checkbox" id="show-description-2"/>
+                    <label for="show-description-2" class="show-description-label">I</label>
+
+                    <div class="description-text">
+                        <h2>BUY NOW!</h2>
+
+                        <p>Buy now and get some bonuses!</p>
+                    </div>
+                </div>
+            </li>
+            <li id="slide3">
+                <img src="https://smallbiztrends.com/wp-content/uploads/2010/03/for-sale.jpg" alt="Sell items."/>
+
+                <div class="description">
+                    <input type="checkbox" id="show-description-3"/>
+                    <label for="show-description-3" class="show-description-label">I</label>
+
+                    <div class="description-text">
+                        <h2>Sell your items!</h2>
+
+                        <p>Try to sell on auction your own goods now!</p>
+                    </div>
+                </div>
+            </li>
+            <li id="slide4">
+                <img src="http://lifeglobe.net/x/entry/804/cousineisland_3.jpg" alt="Perfect island."/>
+
+                <div class="description">
+                    <input type="checkbox" id="show-description-4"/>
+                    <label for="show-description-4" class="show-description-label">I</label>
+
+                    <div class="description-text">
+                        <h2>Special!</h2>
+
+                        <p>Buy this island now! For 1000 000 000 only!</p>
+                    </div>
+                </div>
+            </li>
+            <li id="slide5">
+                <img src="http://static3.businessinsider.com/image/5707f9cc52bcd01a008bb8d3-1190-625/11-reasons-driving-a-supercar-isnt-as-cool-as-you-think.jpg"
+                     alt="Sportcar."/>
+
+                <div class="description">
+                    <input type="checkbox" id="show-description-5"/>
+                    <label for="show-description-5" class="show-description-label">I</label>
+
+                    <div class="description-text">
+                        <h2>Dream!</h2>
+
+                        <p>I know you want it!</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Painting</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Architecture</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Sculpture</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Clothes</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Realty</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Instrument</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Antiques</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Equipment</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Cars</a>
+</div>
+
+<div class="goods">
+    <a href="#" class="button">Other</a>
+</div>
+
+<hr>
+
+</body>
+</html>

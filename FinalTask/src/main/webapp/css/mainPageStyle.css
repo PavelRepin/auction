@@ -1,0 +1,438 @@
+body {
+    background-color: #ccc;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#startpic {
+    margin-top: 5px;
+    height: 3.5vw;
+    min-height: 30px;
+    width: auto;
+}
+
+#putforbids {
+    background-color: #EEE;
+    color: #555;
+    height: 3.5vw;
+    min-height: 30px;
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+    border: lightgrey;
+    display: block;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0px 5px 0px 5px;
+    font-size: x-small;
+    text-decoration: none;
+    width: auto;
+}
+
+#putforbids:hover {
+    background: antiquewhite;
+}
+
+.search {
+    width: 40vw;
+    position: relative;
+}
+
+.search input {
+    border: none;
+}
+
+.search .input {
+    height: 3.5vw;
+    min-height: 30px;
+    width: 100%;
+    padding: 15px 45px 18px 15px;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3);
+
+    border-radius: 20px;
+
+    background: #EEE;
+    font: 15px Tahoma, Arial, sans-serif;
+    color: #555;
+    outline: none;
+}
+
+.search .input:focus {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.4);
+    background: #E8E8E8;
+    color: #333;
+}
+
+.search .submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 45px;
+    height: 100%;
+
+    cursor: pointer;
+    background: url("../images/loop.png") 50% no-repeat;
+    opacity: 0.5;
+}
+
+.search .submit:hover {
+    opacity: 0.8;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+@font-face {
+    font-family: CopyrightHouseIndustries;
+    src: url(..//fonts/CopyrightHouseIndustries.ttf);
+}
+
+.welcome {
+    z-index: 5;
+    font-family: CopyrightHouseIndustries;
+    margin-left: 31%;
+    font-size: 2.2vw;
+    vertical-align: text-top;
+    margin-top: 15px;
+}
+
+#helloText {
+    font-size: 1.4vw;
+    opacity: 0.85;
+    margin-bottom: 30px;
+}
+
+.goods {
+    margin-left: 12%;
+    margin-top: -10%;
+    border: lightgrey;
+    display: block;
+}
+
+.button {
+    min-width: 30px;
+    width: 12vw;
+    display: inline-block;
+    font-family: arial, sans-serif;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    background: rgb(245, 245, 245) linear-gradient(#f4f4f4, #f1f1f1);
+    transition: all .218s ease 0s;
+    padding: 5px;
+    margin: 5px;
+}
+
+.button:hover {
+    color: rgb(24, 24, 24);
+    border: 1px solid rgb(198, 198, 198);
+    background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.button:active {
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(238, 238, 238) linear-gradient(rgb(238, 238, 238), rgb(224, 224, 224));
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1) inset;
+}
+
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot');
+    src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.woff') format('woff'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.ttf') format('truetype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont#WebSymbolsRegular') format('svg');
+}
+
+#slideshow-wrap {
+    height: 20vw;
+    min-height: 100px;
+    width: 38vw;
+    min-width: 190px;
+    margin-right: 30vw;
+    border: 0.75vw rgba(255, 255, 240, 1) solid;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .8);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .8);
+    margin-top: 20px;
+    position: relative;
+    float: right;
+}
+
+#slideshow-inner {
+    width: 100%;
+    height: 100%;
+    background-color: darkgrey;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+#slideshow-inner > ul {
+    list-style: none;
+    height: 100%;
+    width: 500%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#slideshow-inner > ul > li {
+    width: 20%;
+    height: 20vw;
+    float: left;
+    position: relative;
+}
+
+#slideshow-inner > ul > li > img {
+    margin: auto;
+    height: 100%;
+}
+
+#slideshow-wrap input[type=radio] {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 100;
+    visibility: hidden;
+}
+
+#slideshow-wrap label:not(.arrows):not(.show-description-label) {
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+    z-index: 100;
+    width: 0.7vw;
+    height: 0.7vw;
+    background-color: rgba(200, 200, 200, 1);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, .8);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .8);
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+#slideshow-wrap label:not(.arrows):active {
+    bottom: -36px
+}
+
+#slideshow-wrap input[type=radio]#button-1:checked ~ label[for=button-1] {
+    background-color: rgba(100, 100, 100, 1)
+}
+
+#slideshow-wrap input[type=radio]#button-2:checked ~ label[for=button-2] {
+    background-color: rgba(100, 100, 100, 1)
+}
+
+#slideshow-wrap input[type=radio]#button-3:checked ~ label[for=button-3] {
+    background-color: rgba(100, 100, 100, 1)
+}
+
+#slideshow-wrap input[type=radio]#button-4:checked ~ label[for=button-4] {
+    background-color: rgba(100, 100, 100, 1)
+}
+
+#slideshow-wrap input[type=radio]#button-5:checked ~ label[for=button-5] {
+    background-color: rgba(100, 100, 100, 1)
+}
+
+#slideshow-wrap label[for=button-1] {
+    margin-left: -3.6vw
+}
+
+#slideshow-wrap label[for=button-2] {
+    margin-left: -1.8vw
+}
+
+#slideshow-wrap label[for=button-4] {
+    margin-left: 1.8vw
+}
+
+#slideshow-wrap label[for=button-5] {
+    margin-left: 3.6vw
+}
+
+#slideshow-wrap input[type=radio]#button-1:checked ~ #slideshow-inner > ul {
+    left: 0
+}
+
+#slideshow-wrap input[type=radio]#button-2:checked ~ #slideshow-inner > ul {
+    left: -100%
+}
+
+#slideshow-wrap input[type=radio]#button-3:checked ~ #slideshow-inner > ul {
+    left: -200%
+}
+
+#slideshow-wrap input[type=radio]#button-4:checked ~ #slideshow-inner > ul {
+    left: -300%
+}
+
+#slideshow-wrap input[type=radio]#button-5:checked ~ #slideshow-inner > ul {
+    left: -400%
+}
+
+label.arrows {
+    font-family: 'WebSymbolsRegular';
+    font-size: 2vw;
+    color: rgba(100, 100, 100, 1);
+    position: absolute;
+    top: 50%;
+    margin-top: -2vw;
+    display: none;
+    opacity: 0.9;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .8);
+}
+
+label.arrows:hover {
+    opacity: 1
+}
+
+label.arrows:active {
+    margin-top: -2vw
+}
+
+input[type=radio]#button-1:checked ~ .arrows#arrow-2, input[type=radio]#button-2:checked ~ .arrows#arrow-3, input[type=radio]#button-3:checked ~ .arrows#arrow-4, input[type=radio]#button-4:checked ~ .arrows#arrow-5 {
+    right: -5.5vw;
+    display: block;
+}
+
+input[type=radio]#button-2:checked ~ .arrows#arrow-1, input[type=radio]#button-3:checked ~ .arrows#arrow-2, input[type=radio]#button-4:checked ~ .arrows#arrow-3, input[type=radio]#button-5:checked ~ .arrows#arrow-4 {
+    display: block;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+input[type=radio]#button-2:checked ~ .arrows#arrow-1 {
+    left: -1.9vw
+}
+
+input[type=radio]#button-3:checked ~ .arrows#arrow-2 {
+    left: -3.7vw
+}
+
+input[type=radio]#button-4:checked ~ .arrows#arrow-3 {
+    left: -5.5vw
+}
+
+input[type=radio]#button-5:checked ~ .arrows#arrow-4 {
+    left: -7.3vw
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    font-family: 'Yanone Kaffeesatz';
+    z-index: 1000;
+}
+
+.description input {
+    visibility: hidden
+}
+
+.description label {
+    font-family: 'WebSymbolsRegular';
+    background-color: white;
+    position: relative;
+    left: -49%;
+    top: -1vw;
+    width: 3vw;
+    min-width: 22px;
+    height: 1.75vw;
+    min-height: 14px;
+    display: inline-block;
+    font-size: 1.5vw;
+    padding-top: 0.8vw;
+    border-bottom-right-radius: 1vw;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    z-index: 5;
+    color: rgb(20, 20, 20);
+}
+
+#slideshow-inner > ul > li:hover .description label {
+    opacity: 1
+}
+
+.description input[type=checkbox]:checked ~ label {
+    opacity: 1
+}
+
+.description .description-text {
+    max-width: 12vw;
+    height: auto;
+    background-color: rgba(255, 255, 230, .5);
+    padding-left: 3.5vw;
+    padding-top: 1.65vw;
+    padding-right: 1vw;
+    padding-bottom: 1vw;
+    position: relative;
+    margin-top: -3.5vmin;
+    font-size: 1vw;
+    z-index: 4;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    color: rgb(20, 20, 20);
+}
+
+.description input[type=checkbox]:checked ~ .description-text {
+    opacity: 1
+}
+
