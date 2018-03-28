@@ -40,11 +40,11 @@ public class Bid implements Serializable {
     }
 
     @Override
-    public boolean equals(Object t) {
-        if (this == t) return true;
-        if (!(t instanceof Bid)) return false;
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Bid)) return false;
 
-        Bid bid = (Bid) t;
+        Bid bid = (Bid) obj;
 
         if (idBidder != bid.idBidder) return false;
         if (idLot != bid.idLot) return false;
